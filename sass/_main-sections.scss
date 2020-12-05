@@ -17,14 +17,14 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 5rem;
-    
+
             svg {
                 width: 12rem;
                 height: 12rem;
                 fill: $color-primary-dark;
                 margin-bottom: 3rem;
             }
-    
+
             p {
                 font-size: 3rem;
                 text-align: center;
@@ -34,11 +34,96 @@
 
         @media only screen and (max-width: $bp-sm) {
             flex-direction: column;
-            
+
             p {
                 margin-bottom: 10rem;
             }
         }
     }
-    
+
+}
+
+.section-events {
+    padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    .events {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        justify-content: space-around;
+        grid-gap: 5rem;
+        margin-bottom: 7rem;
+
+        .event-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 3rem;
+            overflow: hidden;
+            box-shadow: 0 2px 8px -1px rgba(0, 0, 0, .2);
+            transition: all 0.2s;
+
+            .card-image {
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .card-information {
+                padding: 1rem 2rem;
+                display: flex;
+                flex-direction: column;
+
+                .data {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    font-size: 0.8rem;
+
+                    svg {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        margin: 0 .8rem 0 2rem;
+                    }
+                }
+
+                .h3 {
+                    font-size: 2rem;
+                    margin: 2rem 0;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+
+                .text {
+                    font-size: 1.1rem;
+                }
+
+                .link {
+                    font-size: 1.1rem;
+                    margin: 1rem;
+                    align-self: flex-end;
+                }
+            }
+
+            &:hover {
+                transform: scale(1.01);
+                box-shadow: 0 4px 20px -2px rgba(0, 0, 0, .3);
+            }
+        }
+
+        @media only screen and (max-width: $bp-md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media only screen and (max-width: $bp-xs) {
+            grid-template-columns: 1fr;
+        }
+    }
 }
