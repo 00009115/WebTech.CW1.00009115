@@ -1,0 +1,28 @@
+// COLORS
+$color-dark: #0059FF;
+$color-light: #5F97FF;
+
+// FONTS
+$font-primary: 'Padauk', sans-serif;
+$font-display: 'Nerko One', cursive;
+
+// BREAKPOINTS
+$bp-lg: 1199.98px;
+$bp-md: 991.98px;
+$bp-sm: 767.98px;
+$bp-xs: 575.98px;
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;            //10px
+    overflow-x: hidden;
+}
