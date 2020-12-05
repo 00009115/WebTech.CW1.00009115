@@ -11,7 +11,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 62.5%;
-  font-family: "Padauk", sans-serif, sans-serif;
+  font-family: "Poppins", sans-serif, sans-serif;
   overflow-x: hidden;
 }
 
@@ -86,7 +86,7 @@ html {
 
 .h1 {
   font-size: 7rem;
-  font-family: "Righteous", cursive;
+  font-family: "Abril Fatface", cursive;
   color: #222;
 }
 
@@ -117,6 +117,28 @@ html {
   .h1.small {
     font-size: 4rem;
   }
+}
+
+.h2 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 5rem;
+  text-align: center;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 10rem;
+}
+
+.h2::after {
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 10rem;
+  height: .5rem;
+  background-color: #003ba8;
+  border-radius: 2rem;
 }
 
 .nav {
@@ -253,6 +275,7 @@ html {
 
 .header {
   padding: 0 10rem;
+  padding-bottom: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -292,6 +315,78 @@ html {
 @media only screen and (max-width: 575.98px) {
   .header .header-image img {
     width: 100%;
+  }
+}
+
+.section-advantages {
+  padding: 10rem;
+  background-color: rgba(0, 89, 255, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-advantages .advantages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-advantages .advantages .advantage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5rem;
+}
+
+.section-advantages .advantages .advantage svg {
+  width: 12rem;
+  height: 12rem;
+  fill: #003ba8;
+  margin-bottom: 3rem;
+}
+
+.section-advantages .advantages .advantage p {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .section-advantages .advantages {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section-advantages .advantages p {
+    margin-bottom: 10rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

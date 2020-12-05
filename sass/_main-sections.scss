@@ -1,0 +1,44 @@
+.section-advantages {
+    padding: 10rem;
+    background-color: rgba($color-primary-light, .1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .advantages {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .advantage {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5rem;
+    
+            svg {
+                width: 12rem;
+                height: 12rem;
+                fill: $color-primary-dark;
+                margin-bottom: 3rem;
+            }
+    
+            p {
+                font-size: 3rem;
+                text-align: center;
+                font-weight: 300;
+            }
+        }
+
+        @media only screen and (max-width: $bp-sm) {
+            flex-direction: column;
+            
+            p {
+                margin-bottom: 10rem;
+            }
+        }
+    }
+    
+}

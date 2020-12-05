@@ -72,3 +72,25 @@
         }
     }
 }
+
+.h2 {
+    font-family: $font-display;
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 10rem;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10rem;
+        height: .5rem;
+        background-color: $color-primary-dark;
+        border-radius: 2rem;
+        
+    }
+}
