@@ -21,15 +21,9 @@ html {
   }
 }
 
-@media only screen and (max-width: 991.98px) {
-  html {
-    font-size: 43.75%;
-  }
-}
-
 @media only screen and (max-width: 767.98px) {
   html {
-    font-size: 37.5%;
+    font-size: 43.75%;
   }
 }
 
@@ -130,7 +124,7 @@ html {
 
 .h2 {
   font-family: "Abril Fatface", cursive;
-  font-size: 5rem;
+  font-size: 4rem;
   text-align: center;
   font-weight: 400;
   position: relative;
@@ -148,6 +142,34 @@ html {
   height: .5rem;
   background-color: #003ba8;
   border-radius: 2rem;
+}
+
+.h3 {
+  font-size: 1.6rem;
+  text-align: center;
+  position: relative;
+}
+
+.h3::before {
+  content: "";
+  position: absolute;
+  bottom: -0.4rem;
+  right: -1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-bottom: 0.4rem solid #003ba8;
+  border-right: 0.4rem solid #003ba8;
+}
+
+.h3::after {
+  content: "";
+  position: absolute;
+  top: -0.4rem;
+  left: -1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-top: 0.4rem solid #003ba8;
+  border-left: 0.4rem solid #003ba8;
 }
 
 .nav {
@@ -207,13 +229,17 @@ html {
 }
 
 @media only screen and (min-width: 767.98px) {
-  .nav .nav-bar .nav-item a.page:hover {
+  .nav .nav-bar .nav-item a.page:not(.active):hover {
     color: #0059ff;
   }
-  .nav .nav-bar .nav-item a.page:hover::before {
+  .nav .nav-bar .nav-item a.page:not(.active):hover::before {
     opacity: 1;
-    width: 8rem;
-    height: 8rem;
+    width: 10rem;
+    height: 10rem;
+  }
+  .nav .nav-bar .nav-item a.page.active {
+    color: #0059ff;
+    cursor: default;
   }
 }
 
@@ -375,16 +401,16 @@ html {
 }
 
 .section-advantages .advantages .advantage svg {
-  width: 12rem;
-  height: 12rem;
+  width: 10rem;
+  height: 10rem;
   fill: #003ba8;
   margin-bottom: 3rem;
 }
 
 .section-advantages .advantages .advantage p {
-  font-size: 3rem;
+  font-size: 1.4rem;
+  padding: 2rem 1rem;
   text-align: center;
-  font-weight: 300;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -522,5 +548,125 @@ html {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+}
+
+.footer {
+  padding: 5rem;
+  background-color: rgba(0, 89, 255, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer .nav-bar {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .nav-bar .nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+.footer .nav-bar .nav-item a.page {
+  text-decoration: none;
+  color: #222;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.footer .nav-bar .nav-item a.page.active, .footer .nav-bar .nav-item a.page:hover {
+  color: #003ba8;
+}
+
+.footer .nav-bar .nav-item:first-child {
+  width: 10rem;
+  padding: 0;
+  margin-right: 5rem;
+}
+
+.footer .nav-bar .nav-item:first-child img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 575.98px) {
+  .footer .nav-bar .nav-item:first-child {
+    margin: 5rem 0;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  .footer .nav-bar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 5rem;
+  }
+}
+
+.footer .socials {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .socials .social-media {
+  padding: 1rem;
+}
+
+.footer .socials .social-media svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.footer .socials .social-media svg:hover {
+  fill: #003ba8;
+}
+
+@media only screen and (max-width: 575.98px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.footer .information {
+  font-size: 1.2rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  text-align: center;
+  margin-top: 3rem;
 }
 /*# sourceMappingURL=main.css.map */

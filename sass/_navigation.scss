@@ -39,14 +39,19 @@
                 }
 
                 @media only screen and (min-width: $bp-sm) {
-                    &:hover {
+                    &:not(.active):hover {
                         color: $color-primary-light;
-    
+
                         &::before {
                             opacity: 1;
-                            width: 8rem;
-                            height: 8rem;
+                            width: 10rem;
+                            height: 10rem;
                         }
+                    }
+
+                    &.active {
+                        color: $color-primary-light;
+                        cursor: default;
                     }
                 }
             }

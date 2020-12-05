@@ -4,8 +4,10 @@ $color-primary-light: #0059ff;
 $color-dark: #222;
 
 // FONTS
-$font-primary: 'Poppins', sans-serif;
-$font-display: 'Abril Fatface', cursive;
+$font-primary: 'Poppins',
+sans-serif;
+$font-display: 'Abril Fatface',
+cursive;
 
 // BREAKPOINTS
 $bp-lg: 1199.98px;
@@ -24,19 +26,15 @@ $bp-xs: 575.98px;
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%;  //10px
+    font-size: 62.5%; //10px
     font-family: $font-primary, sans-serif;
     overflow-x: hidden;
 
     @media only screen and (max-width: $bp-lg) {
-        font-size: 50%;  //8px
+        font-size: 50%; //8px
     }
-    
-    @media only screen and (max-width: $bp-md) {
-        font-size: 43.75%;  //7px
-    }
-    
+
     @media only screen and (max-width: $bp-sm) {
-        font-size: 37.5%;  //6px
+        font-size: 43.75%; //7px
     }
 }

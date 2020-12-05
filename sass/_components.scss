@@ -84,7 +84,7 @@
 
 .h2 {
     font-family: $font-display;
-    font-size: 5rem;
+    font-size: 4rem;
     text-align: center;
     font-weight: 400;
     position: relative;
@@ -101,5 +101,33 @@
         background-color: $color-primary-dark;
         border-radius: 2rem;
 
+    }
+}
+
+.h3 {
+    font-size: 1.6rem;
+    text-align: center;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -0.4rem;
+        right: -1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-bottom: .4rem solid $color-primary-dark;
+        border-right: .4rem solid $color-primary-dark;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: -0.4rem;
+        left: -1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-top: .4rem solid $color-primary-dark;
+        border-left: .4rem solid $color-primary-dark;
     }
 }
