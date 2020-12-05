@@ -1,6 +1,7 @@
 // COLORS
-$color-dark: #0059FF;
-$color-light: #5F97FF;
+$color-primary-dark: #0059FF;
+$color-primary-light: #5F97FF;
+$color-dark: #222;
 
 // FONTS
 $font-primary: 'Padauk', sans-serif;
@@ -23,6 +24,19 @@ $bp-xs: 575.98px;
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%;            //10px
+    font-size: 62.5%;  //10px
+    font-family: $font-primary, sans-serif;
     overflow-x: hidden;
+
+    @media only screen and (max-width: $bp-lg) {
+        font-size: 50%;  //8px
+    }
+    
+    @media only screen and (max-width: $bp-md) {
+        font-size: 43.75%;  //7px
+    }
+    
+    @media only screen and (max-width: $bp-sm) {
+        font-size: 37.5%;  //6px
+    }
 }
