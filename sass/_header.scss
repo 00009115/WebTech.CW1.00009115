@@ -1,0 +1,41 @@
+.header {
+    padding: 0 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-image {
+        flex-basis: 35%;
+        text-align: center;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: $bp-sm) {
+        flex-direction: column-reverse;
+
+        .header-information {
+            text-align: center;
+        }
+
+        .header-image {
+                
+            img {
+                width: 50%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $bp-xs) {
+        .header-image {
+                
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+    

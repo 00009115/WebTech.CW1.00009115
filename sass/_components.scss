@@ -15,7 +15,7 @@
     &.dark,
     &.dark:link,
     &.dark:visited {
-            background-color: $color-primary-dark;
+            background-color: $color-primary-light;
             color: #fff;
             box-shadow: 0 2px 8px -1px rgba(0, 0, 0, .5);
     }
@@ -29,7 +29,7 @@
     &.light:link,
     &.light:visited {
             background-color: #fff;
-            color: $color-primary-dark;
+            color: $color-primary-light;
             box-shadow: 0 2px 8px -1px rgba(0, 0, 0, .5);
     }
 
@@ -40,5 +40,35 @@
     
 }
 
+.h1 {
+    font-size: 7rem;
+    font-family: $font-display;
+    color: $color-dark;
 
+    span {
+        font-size: 10rem;
+        font-family: 'Englebert', sans-serif;
+        color: $color-primary-dark;
+        display: block;
+    }
 
+    &.small {
+        font-size: 5rem;
+    }
+
+    @media only screen and (max-width: $bp-md) {
+        font-size: 6rem;
+
+        &.small {
+            font-size: 5rem;
+        }
+    }
+    
+    @media only screen and (max-width: $bp-xs) {
+        font-size: 5rem;
+
+        &.small {
+            font-size: 4rem;
+        }
+    }
+}
