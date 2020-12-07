@@ -48,7 +48,7 @@ document.getElementById("card-add-button").addEventListener("click", () => {
     let time = [document.getElementById("time-from").value, document.getElementById("time-to").value];
     let people = [document.getElementById("people-from").value, document.getElementById("people-to").value];
 
-    if (name && type && info && time[0] < time[1] && people[0] < people[1]) {
+    if (name && type && info && time[0] && time[1] && people[0] && people[0] && time[0] < time[1] && people[0] < people[1]) {
 
         events.push({
             name: nameValidated,
@@ -87,6 +87,8 @@ document.getElementById("card-add-button").addEventListener("click", () => {
 
         closeBox();
 
+    } else if (!name || !type || !info || !time[0] || !time[1] || !people[0] || !people[0]) {
+        window.alert("Insert all required data");
     } else if (time[0] >= time[1] || people[0] >= people[1]) {
         window.alert("Minimum amount should be less than maximum");
     } else {

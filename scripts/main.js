@@ -1,6 +1,6 @@
 // CHECKING WHETHER SIGNED IN OR NOT
 
-let isSigned = true;
+let isSigned = false;
 
 if (isSigned) {
     document.getElementById("sign").style.display = "none";

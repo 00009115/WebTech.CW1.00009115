@@ -1023,9 +1023,15 @@ html {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 991.98px) {
+  .section-add .add-box {
+    overflow-y: scroll;
+  }
+}
+
 @media only screen and (max-width: 575.98px) {
   .section-add .add-box {
-    height: 80%;
+    height: 90%;
     width: 80%;
   }
 }
