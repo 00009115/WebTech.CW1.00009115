@@ -61,24 +61,12 @@
         display: block;
     }
 
-    &.small {
-        font-size: 5rem;
-    }
-
     @media only screen and (max-width: $bp-md) {
         font-size: 6rem;
-
-        &.small {
-            font-size: 5rem;
-        }
     }
 
     @media only screen and (max-width: $bp-xs) {
         font-size: 5rem;
-
-        &.small {
-            font-size: 4rem;
-        }
     }
 }
 
@@ -108,6 +96,7 @@
     font-size: 1.6rem;
     text-align: center;
     position: relative;
+    grid-column: 1 / -1;
 
     &::before {
         content: "";

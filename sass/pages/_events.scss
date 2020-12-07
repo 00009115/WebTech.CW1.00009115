@@ -1,0 +1,109 @@
+.section-events {
+
+    svg#add-button {
+        width: 10rem;
+        height: 10rem;
+        fill: #aaa;
+        transition: all 0.2s;
+        backface-visibility: hidden;
+
+        &:hover {
+            fill: rgba($color-primary-dark, 1);
+            filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .2));
+            transform: scale(1.015) translateY(-0.5rem);
+        }
+    }
+}
+
+.section-add {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    &.is-visible {
+        display: flex;
+    }
+
+    .add-box {
+        width: 60%;
+        height: 85%;
+        background-color: #fff;
+        border-radius: 4rem;
+        overflow: hidden;
+        padding: 3rem;
+        position: relative;
+
+        .h2 {
+            font-size: 3rem;
+            margin-bottom: 0;
+        }
+
+        .add-event-form {
+            padding: 5rem 10rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
+
+            label {
+                font-size: 1.2rem;
+            }
+
+            input,
+            select,
+            textarea {
+                width: 100%;
+                padding: 0.8rem 1rem;
+                outline: none;
+                overflow: hidden;
+                resize: vertical;
+                grid-column: 2 / -1;
+                border-radius: 3rem;
+                border: 1px solid $color-dark;
+            }
+
+            .btn {
+                font-size: 1.5rem;
+                padding: 1rem 2rem;
+                grid-column: 1 / -1;
+                justify-self: center;
+                margin-top: 2rem;
+            }
+
+            @media only screen and (max-width: $bp-md) {
+                grid-template-columns: 1fr;
+                padding: 5rem;
+
+                input,
+                select,
+                textarea {
+                    grid-column: 1 / -1;
+                }
+            }
+
+            @media only screen and (max-width: $bp-xs) {
+                padding: 5rem 3rem;
+            }
+        }
+
+        .close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 3rem;
+            height: 3rem;
+            fill: red;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: $bp-xs) {
+            height: 80%;
+            width: 80%;
+        }
+    }
+}

@@ -10,7 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap&family=Poppins:wght@300;400;500&display=swap&family=Englebert&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
-    <title>Joyeeuz | Home</title>
+    <title>Joyeeuz | About</title>
 </head>
 
 <body>
@@ -21,13 +21,13 @@
         </a>
         <ul class="nav-bar" id="nav-bar">
             <li class="nav-item">
-                <a href="#" onclick="return false;" class="page active">Home</a>
+                <a href="/index.html" class="page">Home</a>
             </li>
             <li class="nav-item">
                 <a href="/pages/about.html" class="page">About</a>
             </li>
             <li class="nav-item">
-                <a href="/pages/events.html" class="page">Events</a>
+                <a href="#" onclick="return false;" class="page active">Events</a>
             </li>
             <li class="nav-item">
                 <a href="/pages/contacts.html" class="page">Contacts</a>
@@ -50,48 +50,15 @@
         </span>
     </nav>
 
-    <header class="header home">
-        <div class="header-information">
-            <h1 class="h1">Enjoy the events with <span>joyee</span></h1>
-        </div>
+    <header class="header">
         <div class="header-image">
-            <img src="/images/hero.png" alt="Illustration representing entertainment">
+            <img src="/images/events.png" alt="Illustration representing entertainment">
         </div>
     </header>
 
-    <section class="section-advantages">
-        <h2 class="h2">Why to choose us?</h2>
-        <div class="advantages">
-            <div class="advantage">
-                <svg>
-                    <use xlink:href="/icons/icons.svg#i-users"></use>
-                </svg>
-                <h3 class="h3">Great range of active users</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt facere tempora vero pariatur,
-                    quaerat.</p>
-            </div>
-            <div class="advantage">
-                <svg>
-                    <use xlink:href="/icons/icons.svg#i-safe"></use>
-                </svg>
-                <h3 class="h3">Everything is safe and secure</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt facere tempora vero pariatur,
-                    quaerat.</p>
-            </div>
-            <div class="advantage">
-                <svg>
-                    <use xlink:href="/icons/icons.svg#i-add"></use>
-                </svg>
-                <h3 class="h3">Availability of creating events</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt facere tempora vero pariatur,
-                    quaerat.</p>
-            </div>
-        </div>
-    </section>
-
     <section class="section-events">
         <h2 class="h2">Events</h2>
-        <div class="events">
+        <div class="events" id="events">
             <div class="event-card">
                 <div class="card-image">
                     <img src="/images/event-cards/pet.png"
@@ -109,6 +76,30 @@
                         <p>5-10 people</p>
                     </div>
                     <h3 class="h3">Entertainment with pets</h3>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur impedit
+                        voluptates alias
+                        ut, blanditiis sint nesciunt illum optio illo cupiditate recusandae! Aperiam veniam distinctio
+                        quos numquam at error suscipit.</p>
+                    <a href="#" onclick="return false;" class="link">Join &#8594;</a>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="card-image">
+                    <img src="/images/event-cards/brainstorming.png"
+                        alt="An Illustration of petting | from https://icons8.com/illustrations">
+                </div>
+                <div class="card-information">
+                    <div class="data">
+                        <svg>
+                            <use xlink:href="/icons/icons.svg#i-time"></use>
+                        </svg>
+                        <p>1-2 hours</p>
+                        <svg>
+                            <use xlink:href="/icons/icons.svg#i-users"></use>
+                        </svg>
+                        <p>2-3 people</p>
+                    </div>
+                    <h3 class="h3">Let's do some brainstorming</h3>
                     <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur impedit
                         voluptates alias
                         ut, blanditiis sint nesciunt illum optio illo cupiditate recusandae! Aperiam veniam distinctio
@@ -192,8 +183,83 @@
                     <a href="#" onclick="return false;" class="link">Join &#8594;</a>
                 </div>
             </div>
+            <div class="event-card">
+                <div class="card-image">
+                    <img src="/images/event-cards/homework.png"
+                        alt="An Illustration of petting | from https://icons8.com/illustrations">
+                </div>
+                <div class="card-information">
+                    <div class="data">
+                        <svg>
+                            <use xlink:href="/icons/icons.svg#i-time"></use>
+                        </svg>
+                        <p>2-3 hours</p>
+                        <svg>
+                            <use xlink:href="/icons/icons.svg#i-users"></use>
+                        </svg>
+                        <p>1-2 people</p>
+                    </div>
+                    <h3 class="h3">Help children with homework</h3>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur impedit
+                        voluptates alias
+                        ut, blanditiis sint nesciunt illum optio illo cupiditate recusandae! Aperiam veniam distinctio
+                        quos numquam at error suscipit.</p>
+                    <a href="#" onclick="return false;" class="link">Join &#8594;</a>
+                </div>
+            </div>
         </div>
-        <a href="/pages/events.html" class="btn dark">More &#8594;</a>
+        <svg id="add-button">
+            <use xlink:href="/icons/icons.svg#i-plus"></use>
+        </svg>
+    </section>
+
+    <section class="section-add" id="section-add">
+        <div class="add-box">
+            <h2 class="h2">
+                Add Event
+            </h2>
+            <form action="#" class="add-event-form" id="my-event-form">
+
+                <label for="name">Insert the name:</label>
+                <input type="text" name="name" id="name" class="form-text" placeholder="Entertaining the children ..."
+                    required>
+
+                <label for="type">Choose the type:</label>
+                <select name="type" type="op" id="type" required>
+                    <option value="brainstorming">Brainstorming</option>
+                    <option value="christmas">Decoration</option>
+                    <option value="cooking">Cooking</option>
+                    <option value="family">Family</option>
+                    <option value="homework">Homework</option>
+                    <option value="pet">Pet</option>
+                    <option value="quizz">Quizz</option>
+                    <option value="science">Science</option>
+                    <option value="sport">Sport</option>
+                    <option value="technology">Technology</option>
+                </select>
+
+                <label for="name">Insert the details:</label>
+                <textarea name="details" id="details" class="form-text text-area"
+                    placeholder="You will be playing with kids and entertaining them ..." required></textarea>
+
+                <label for="time-from">Estimated minimum time (in hours):</label>
+                <input type="number" name="time-from" id="time-from" class="form-range" min="1" max="24" required>
+
+                <label for="time-to">Estimated maximum time (in hours):</label>
+                <input type="number" name="time-to" id="time-to" class="form-range" min="1" max="24" required>
+
+                <label for="people-from">Estimated minimum people:</label>
+                <input type="number" name="people-from" id="people-from" class="form-range" min="1" max="100" required>
+
+                <label for="people-to">Estimated maximum people:</label>
+                <input type="number" name="people-to" id="people-to" class="form-range" min="1" max="100" required>
+
+                <a href="@" onclick="return false;" class="btn dark" id="card-add-button">Add +</a>
+            </form>
+            <svg class="close" id="card-close-button">
+                <use xlink:href="/icons/icons.svg#i-close"></use>
+            </svg>
+        </div>
     </section>
 
     <footer class="footer">
@@ -204,13 +270,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" onclick="return false;" class="page active">Home</a>
+                <a href="/index.html" class="page">Home</a>
             </li>
             <li class="nav-item">
                 <a href="/pages/about.html" class="page">About</a>
             </li>
             <li class="nav-item">
-                <a href="/pages/events.html" class="page">Events</a>
+                <a href="#" onclick="return false;" class="page active">Events</a>
             </li>
             <li class="nav-item">
                 <a href="/pages/contacts.html" class="page">Contacts</a>
@@ -258,6 +324,7 @@
     </footer>
 
     <script src="/scripts/main.js"></script>
+    <script src="/scripts/eventApp.js"></script>
 </body>
 
 </html>

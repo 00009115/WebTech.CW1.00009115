@@ -1,12 +1,11 @@
 .nav {
-    padding: 3rem 5rem;
-    padding-bottom: 0;
+    padding: 2rem 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .logo img {
-        width: 15rem;
+        width: 12rem;
     }
 
     .nav-bar {
@@ -88,6 +87,7 @@
             justify-content: space-around;
             background-color: $color-primary-light;
             transform: all 0.2s;
+            z-index: 999;
 
             .nav-item {
 

@@ -1,7 +1,16 @@
+// BASIC SETUP
 @import 'base';
 @import 'components';
 
+// HOME PAGE AND OVERALL TEMPLATE
 @import 'navigation';
 @import 'header';
 @import 'main-sections';
 @import 'footer';
+
+// OTHER PAGES
+@import 'pages/about';
+@import 'pages/contacts';
+@import 'pages/events';
+@import 'pages/sign';
+@import 'pages/profile';

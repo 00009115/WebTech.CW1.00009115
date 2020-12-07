@@ -62,7 +62,7 @@
         .event-card {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            height: 100%;
             border-radius: 3rem;
             overflow: hidden;
             box-shadow: 0 2px 8px -1px rgba(0, 0, 0, .2);
@@ -109,6 +109,7 @@
                     font-size: 1.1rem;
                     margin: 1rem;
                     align-self: flex-end;
+                    justify-self: flex-end;
                 }
             }
 
