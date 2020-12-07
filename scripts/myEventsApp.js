@@ -1,11 +1,10 @@
-// GENERATING THE CREATED EVENTS
-let user = JSON.parse(localStorage.getItem(""));
+// GENERATING THE CREATED EVENTS ONTO PROFILE PAGE
 
 if (isSigned) {
-    let createdEvents = JSON.parse(localStorage.getItem("events"));
+    let createdEvents = JSON.parse(localStorage.getItem("events"));  // restoring the old "event" cards data from the localStorage
 
     createdEvents.forEach(event => {
-        let newCard = document.createElement("div");
+        let newCard = document.createElement("div");  //creating a new DOM element
         newCard.classList.add("event-card");
         newCard.innerHTML = '<div class="card-image">' +
             '                    <img src="/images/event-cards/' + event.type + '.png"' +
@@ -26,8 +25,9 @@ if (isSigned) {
             '                    <p class="text">' + event.info + '</p>' +
             '                    <a href="#" onclick="return false;" class="link">Join →</a>' +
             '                </div>';
+        // assigning an HTML code to the created element with dynamic data
 
-        document.getElementById("myEvents").appendChild(newCard);
+        document.getElementById("myEvents").appendChild(newCard); // appending the card with generated elements inside to the DOM
     });
 }
 

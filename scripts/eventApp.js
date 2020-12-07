@@ -1,9 +1,9 @@
-// EVENT PAGE FEATURES
+// REGENERATING THE OLD EVENTS ONTO EVENTS PAGE
 
-let createdEvents = JSON.parse(localStorage.getItem("events"));
+let events = JSON.parse(localStorage.getItem("events"));  // restoring the old "event" cards data from the localStorage
 
-createdEvents.forEach(event => {
-    let newCard = document.createElement("div");
+events.forEach(event => {
+    let newCard = document.createElement("div");  //creating a new DOM element
     newCard.classList.add("event-card");
     newCard.innerHTML = '<div class="card-image">' +
         '                    <img src="/images/event-cards/' + event.type + '.png"' +
@@ -24,21 +24,24 @@ createdEvents.forEach(event => {
         '                    <p class="text">' + event.info + '</p>' +
         '                    <a href="#" onclick="return false;" class="link">Join →</a>' +
         '                </div>';
+    // assigning an HTML code to the created element with dynamic data
 
-    document.getElementById("events").appendChild(newCard);
+    document.getElementById("events").appendChild(newCard);  // appending the card with generated elements inside to the DOM
 });
+
+// CREATING NEW EVENT
 
 document.getElementById("add-button").addEventListener("click", () => {
     document.getElementById("section-add").classList.add("is-visible");
+    // opening the "section-add" box
 });
-
-let events = JSON.parse(localStorage.getItem("events"));
 
 let closeBox = () => {
     document.getElementById("section-add").classList.remove("is-visible");
+    // a function which closes the box
 }
 
-document.getElementById("card-close-button").addEventListener("click", closeBox);
+document.getElementById("card-close-button").addEventListener("click", closeBox);  // using the function to close certain box
 
 document.getElementById("card-add-button").addEventListener("click", () => {
     let name = document.getElementById("name").value;
@@ -46,9 +49,9 @@ document.getElementById("card-add-button").addEventListener("click", () => {
     let type = document.getElementById("type").value;
     let info = document.getElementById("details").value;
     let time = [document.getElementById("time-from").value, document.getElementById("time-to").value];
-    let people = [document.getElementById("people-from").value, document.getElementById("people-to").value];
+    let people = [document.getElementById("people-from").value, document.getElementById("people-to").value];  // storing the values of inputs into variables
 
-    if (name && type && info && time[0] && time[1] && people[0] && people[0] && time[0] < time[1] && people[0] < people[1]) {
+    if (name && type && info && time[0] && time[1] && people[0] && people[0] && time[0] < time[1] && people[0] < people[1]) {  // checking if whethers are valid
 
         events.push({
             name: nameValidated,
@@ -57,9 +60,12 @@ document.getElementById("card-add-button").addEventListener("click", () => {
             time: time,
             people: people
         });
+        // pushing inserted data as an object to "events" array
 
-        localStorage.setItem("events", JSON.stringify(events));
+        localStorage.setItem("events", JSON.stringify(events));  // setting the stringified array into the localStorage
 
+
+        // generating the new event card to the DOM
         let newCard = document.createElement("div");
         newCard.classList.add("event-card");
         newCard.innerHTML = '<div class="card-image">' +
@@ -83,10 +89,12 @@ document.getElementById("card-add-button").addEventListener("click", () => {
             '                </div>';
 
         document.getElementById("events").appendChild(newCard);
-        document.getElementById('my-event-form').reset();
+        document.getElementById('my-event-form').reset();  // resetting the form
 
-        closeBox();
+        closeBox();  // calling the function to close the box
 
+
+        // form validation processes
     } else if (!name || !type || !info || !time[0] || !time[1] || !people[0] || !people[0]) {
         window.alert("Insert all required data");
     } else if (time[0] >= time[1] || people[0] >= people[1]) {
