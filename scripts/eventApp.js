@@ -6,17 +6,17 @@ events.forEach(event => {
     let newCard = document.createElement("div");  //creating a new DOM element
     newCard.classList.add("event-card");
     newCard.innerHTML = '<div class="card-image">' +
-        '                    <img src="/images/event-cards/' + event.type + '.png"' +
+        '                    <img src="../images/event-cards/' + event.type + '.png"' +
         '                        alt="An Illustration of ' + event.type + ' | from https://icons8.com/illustrations">' +
         '                </div>' +
         '                <div class="card-information">' +
         '                    <div class="data">' +
         '                        <svg>' +
-        '                            <use xlink:href="/icons/icons.svg#i-time"></use>' +
+        '                            <use xlink:href="../icons/icons.svg#i-time"></use>' +
         '                        </svg>' +
         '                        <p>' + event.time[0] + '-' + event.time[1] + ' hours</p>' +
         '                        <svg>' +
-        '                            <use xlink:href="/icons/icons.svg#i-users"></use>' +
+        '                            <use xlink:href="../icons/icons.svg#i-users"></use>' +
         '                        </svg>' +
         '                        <p>' + event.people[0] + '-' + event.people[1] + ' people</p>' +
         '                    </div>' +
@@ -69,17 +69,17 @@ document.getElementById("card-add-button").addEventListener("click", () => {
         let newCard = document.createElement("div");
         newCard.classList.add("event-card");
         newCard.innerHTML = '<div class="card-image">' +
-            '                    <img src="/images/event-cards/' + type + '.png"' +
+            '                    <img src="../images/event-cards/' + type + '.png"' +
             '                        alt="An Illustration of ' + type + ' | from https://icons8.com/illustrations">' +
             '                </div>' +
             '                <div class="card-information">' +
             '                    <div class="data">' +
             '                        <svg>' +
-            '                            <use xlink:href="/icons/icons.svg#i-time"></use>' +
+            '                            <use xlink:href="../icons/icons.svg#i-time"></use>' +
             '                        </svg>' +
             '                        <p>' + time[0] + '-' + time[1] + ' hours</p>' +
             '                        <svg>' +
-            '                            <use xlink:href="/icons/icons.svg#i-users"></use>' +
+            '                            <use xlink:href="../icons/icons.svg#i-users"></use>' +
             '                        </svg>' +
             '                        <p>' + people[0] + '-' + people[1] + ' people</p>' +
             '                    </div>' +
