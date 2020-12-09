@@ -4,6 +4,9 @@
 let createdEvents = JSON.parse(localStorage.getItem("events"));  // restoring the old "event" cards data from the localStorage
 
 if (createdEvents) {
+    document.getElementById("empty-message").innerText = "You have created following events";
+    console.log("yeehoo")
+
     createdEvents.forEach(event => {
         let newCard = document.createElement("div");  //creating a new DOM element
         newCard.classList.add("event-card");
@@ -27,7 +30,6 @@ if (createdEvents) {
             '                    <a href="#" onclick="return false;" class="link">Join →</a>' +
             '                </div>';
         // assigning an HTML code to the created element with dynamic data
-
         document.getElementById("myEvents").appendChild(newCard); // appending the card with generated elements inside to the DOM
     });
 }

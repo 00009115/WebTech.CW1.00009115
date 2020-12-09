@@ -1,6 +1,6 @@
 // CHECKING WHETHER SIGNED IN OR NOT
 
-let isSigned = false;  // CAN BE RESET TO TRUE WHEN USER SIGNS IN. RESET TO TRUE TO ENABLE THE PROFILE PAGE
+let isSigned = true;  // CAN BE RESET TO TRUE WHEN USER SIGNS IN. RESET TO TRUE TO ENABLE THE PROFILE PAGE
 
 if (isSigned) {
     document.getElementById("sign").style.display = "none";
